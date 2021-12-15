@@ -12,6 +12,7 @@ public class WeatherResponse {
     public String getWeatherText() {
         return weatherText;
     }
+
     @JsonProperty("WeatherText")
     public void setWeatherText(String weatherText) {
         this.weatherText = weatherText;

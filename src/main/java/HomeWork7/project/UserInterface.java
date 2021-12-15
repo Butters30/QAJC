@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class UserInterface {
-
     private final Controller controller = new Controller();
 
     public void runApplication() {

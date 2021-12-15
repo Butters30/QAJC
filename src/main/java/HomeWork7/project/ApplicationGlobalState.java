@@ -4,11 +4,10 @@ public final class ApplicationGlobalState {
 
     private static ApplicationGlobalState INSTANCE;
     private String selectedCity = null;
-    private final String API_KEY = "pkGCzBoEWQSjKuMEWv6pH6pAyqw8WBF2";
+    private final String API_KEY = "dH3vftkzygAUtOpFfNfA9RVrFqD13xGA";
 
     private ApplicationGlobalState() {
     }
-
     // Непотокобезопасный код для упрощения
     public static ApplicationGlobalState getInstance() {
         if(INSTANCE == null) {
@@ -16,7 +15,6 @@ public final class ApplicationGlobalState {
         }
         return INSTANCE;
     }
-
     public String getSelectedCity() {
         return selectedCity;
     }

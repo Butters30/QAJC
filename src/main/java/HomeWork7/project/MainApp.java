@@ -2,6 +2,7 @@ package HomeWork7.project;
 
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.simple.parser.ParseException;
@@ -10,13 +11,13 @@ import java.io.IOException;
 
 public class MainApp {
 
-    public static void main(String[] args){
-//        String jsonString = "{ }";
-//        ObjectMapper objectMapper = new ObjectMapper();
-//
-//        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-//        WeatherResponse car = objectMapper.readValue(jsonString, WeatherResponse.class);
-//        System.out.println(car);
+    public static void main(String[] args) throws JsonProcessingException {
+        String jsonString = "{ \"WeatherText\" : \"Cloudy\" }";
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        WeatherResponse car = objectMapper.readValue(jsonString, WeatherResponse.class);
+        System.out.println(car);
 
         UserInterface userInterface = new UserInterface();
         userInterface.runApplication();

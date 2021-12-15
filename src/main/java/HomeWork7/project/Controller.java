@@ -28,18 +28,17 @@ public class Controller {
             case GET_CURRENT_WEATHER:
                 getCurrentWeather();
                 break;}
-//        switch (variantResult.get(command)){
-//            case GET_WEATHER_IN_NEXT_5_DAYS:
-//                getWeatherIn5Days();
-//                break;
-//        }
+        switch (variantResult.get(command)){
+            case GET_WEATHER_IN_NEXT_5_DAYS:
+                getWeatherIn5Days();
+                break;
+        }
     }
-
     public void getCurrentWeather() throws IOException {
-        weatherProvider.getWeather(Periods.NOW);
+        weatherProvider.getWeatherDay(Periods.NOW);
     }
 
-//    public void getWeatherIn5Days() throws IOException{
-//        weatherProvider.getWeather(Periods.FIVE_DAYS);
-//    }
+    public void getWeatherIn5Days() throws IOException{
+        weatherProvider.getWeatherFiveDays(Periods.FIVE_DAYS);
+    }
 }

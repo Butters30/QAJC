@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public interface WeatherProvider {
 
-    void getWeather(Periods period) throws IOException;
-
+    void getWeatherFiveDays(Periods period) throws IOException;
+    void getWeatherDay(Periods period) throws IOException;
 
 }
